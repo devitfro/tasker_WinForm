@@ -80,7 +80,39 @@ namespace tasker
         {
             deadlineTask = monthCalendar.SelectionStart.ToString("dd.MM.yyyy");
 
-            dataGridView.Rows.Add(textTaskName.Text, textTaskDescr.Text, deadlineTask, priorityTrack.Value + " %");
+            if (!string.IsNullOrWhiteSpace(textTaskName.Text) && !string.IsNullOrWhiteSpace(textTaskDescr.Text))
+            {
+                dataGridView.Rows.Add(textTaskName.Text, textTaskDescr.Text, deadlineTask, priorityTrack.Value + " %");
+                textTaskName.Text = null;
+                textTaskDescr.Text = null;
+
+                // Set the current date in the calendar
+                monthCalendar.SelectionStart = DateTime.Now;
+                monthCalendar.SelectionEnd = DateTime.Now;
+            }
+            else
+            {
+                // Display an error message if one of the fields is empty
+                MessageBox.Show("Please fill in all fields before adding a task.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }      
+        }
+
+        private void bttnEdit_Click(object sender, EventArgs e)
+        {
+     
+            deadlineTask = monthCalendar.SelectionStart.ToString("dd.MM.yyyy");
+            if (dataGridView.CurrentRow != null)
+            {
+                if(!String.IsNullOrWhiteSpace(textTaskName.Text) || !string.IsNullOrWhiteSpace(textTaskDescr.Text))
+                {
+                    dataGridView.CurrentRow.Cells["task_name"].Value = textTaskName.Text;
+                    dataGridView.CurrentRow.Cells["task_description"].Value = textTaskDescr.Text;
+                }
+               
+                dataGridView.CurrentRow.Cells["deadline"].Value = deadlineTask;
+                dataGridView.CurrentRow.Cells["priority_task"].Value = priorityTrack.Value + " %";
+            }
+
             textTaskName.Text = null;
             textTaskDescr.Text = null;
 
@@ -88,24 +120,6 @@ namespace tasker
             monthCalendar.SelectionStart = DateTime.Now;
             monthCalendar.SelectionEnd = DateTime.Now;
         }
-
-        private void bttnEdit_Click(object sender, EventArgs e)
-        {
-            deadlineTask = monthCalendar.SelectionStart.ToString("dd.MM.yyyy");
-            if (dataGridView.CurrentRow != null)
-            {
-                dataGridView.CurrentRow.Cells["task_name"].Value = textTaskName.Text;
-                dataGridView.CurrentRow.Cells["task_description"].Value = textTaskDescr.Text;
-                dataGridView.CurrentRow.Cells["deadline"].Value = deadlineTask;
-                dataGridView.CurrentRow.Cells["priority_task"].Value = priorityTrack.Value + " %";
-            }
-
-            // Set the current date in the calendar
-            monthCalendar.SelectionStart = DateTime.Now;
-            monthCalendar.SelectionEnd = DateTime.Now;
-        }
-
-      
 
         private void bttnDelete_Click(object sender, EventArgs e)
         {
@@ -123,5 +137,47 @@ namespace tasker
         {
 
         }
+
+
+        // Button response to action
+        private void bttn_MouseDown(object sender, MouseEventArgs e)
+        {
+            Button clickedButton = sender as Button;
+            if (clickedButton != null)
+            {
+                clickedButton.FlatAppearance.BorderColor = SystemColors.ControlDark;
+            }
+        }
+
+        private void bttn_MouseEnter(object sender, EventArgs e)
+        {
+            Button hoveredButton = sender as Button;
+            if (hoveredButton != null)
+            {
+                var color = Color.FromArgb(32, 4, 68);
+                hoveredButton.FlatAppearance.BorderColor = color;
+                hoveredButton.BackColor = Color.FromArgb(250, 168, 133);
+            }
+        }
+
+        private void bttn_MouseLeave(object sender, EventArgs e)
+        {
+            Button hoveredButton = sender as Button;
+            if (hoveredButton != null)
+            {
+                hoveredButton.BackColor = Color.FromArgb(238, 238, 238);
+            }
+        }
+
+        private void bttn_MouseUp(object sender, MouseEventArgs e)
+        {
+            Button clickedButton = sender as Button;
+            if (clickedButton != null)
+            {
+                var color = Color.FromArgb(32, 4, 68);
+                clickedButton.FlatAppearance.BorderColor = color;
+            }
+        }
+
     }
 }
