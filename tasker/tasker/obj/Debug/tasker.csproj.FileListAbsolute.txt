@@ -1,0 +1,10 @@
+D:\development\projects\tasker_WinForm\tasker\tasker\bin\Debug\tasker.exe.config
+D:\development\projects\tasker_WinForm\tasker\tasker\bin\Debug\tasker.exe
+D:\development\projects\tasker_WinForm\tasker\tasker\bin\Debug\tasker.pdb
+D:\development\projects\tasker_WinForm\tasker\tasker\obj\Debug\tasker.csproj.AssemblyReference.cache
+D:\development\projects\tasker_WinForm\tasker\tasker\obj\Debug\tasker.Form1.resources
+D:\development\projects\tasker_WinForm\tasker\tasker\obj\Debug\tasker.Properties.Resources.resources
+D:\development\projects\tasker_WinForm\tasker\tasker\obj\Debug\tasker.csproj.GenerateResource.cache
+D:\development\projects\tasker_WinForm\tasker\tasker\obj\Debug\tasker.csproj.CoreCompileInputs.cache
+D:\development\projects\tasker_WinForm\tasker\tasker\obj\Debug\tasker.exe
+D:\development\projects\tasker_WinForm\tasker\tasker\obj\Debug\tasker.pdb
