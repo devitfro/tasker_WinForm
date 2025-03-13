@@ -8,3 +8,7 @@ D:\development\projects\tasker_WinForm\tasker\tasker\obj\Debug\tasker.csproj.Gen
 D:\development\projects\tasker_WinForm\tasker\tasker\obj\Debug\tasker.csproj.CoreCompileInputs.cache
 D:\development\projects\tasker_WinForm\tasker\tasker\obj\Debug\tasker.exe
 D:\development\projects\tasker_WinForm\tasker\tasker\obj\Debug\tasker.pdb
+D:\development\projects\tasker_WinForm\tasker\tasker\bin\Debug\Newtonsoft.Json.dll
+D:\development\projects\tasker_WinForm\tasker\tasker\bin\Debug\Newtonsoft.Json.xml
+D:\development\projects\tasker_WinForm\tasker\tasker\obj\Debug\tasker.AuthorizationForm.resources
+D:\development\projects\tasker_WinForm\tasker\tasker\obj\Debug\tasker.csproj.Up2Date

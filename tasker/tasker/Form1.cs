@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json;
+using System.IO;
+
 
 namespace tasker
 {
@@ -17,63 +20,64 @@ namespace tasker
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
+        private void Form1_Load(object sender, EventArgs e) { }
 
-        }
+        private void label2_Click(object sender, EventArgs e) { }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
+        private void groupBox1_Enter(object sender, EventArgs e) { }
 
-        }
+        private void button1_Click(object sender, EventArgs e) { }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
+        private void groupBox2_Enter(object sender, EventArgs e) { }
 
-        }
+        private void checkBox4_CheckedChanged(object sender, EventArgs e) { }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
+        private void textBox2_TextChanged(object sender, EventArgs e) { }
 
-        }
+        private void label5_Click(object sender, EventArgs e) { }
 
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
+        private void button3_Click(object sender, EventArgs e) { }
 
-        }
+        private void label3_Click(object sender, EventArgs e) { }
 
-        private void checkBox4_CheckedChanged(object sender, EventArgs e)
-        {
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e) { }
 
-        }
+        private void textBox1_TextChanged(object sender, EventArgs e) { }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
+        private void calendar_DateChanged(object sender, DateRangeEventArgs e) { }
 
-        }
+        private void button1_Click_1(object sender, EventArgs e) { }
 
-        private void label5_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-          
-
-        }
+        /// <summary>
+        /// start function
+        /// </summary>
 
         private string deadlineTask;
+        private string jsonFilePath = "tasks.json";
+
+        private void SaveTasksToJson()
+        {
+            var tasks = new List<dynamic>();
+
+            foreach (DataGridViewRow row in dataGridView.Rows)
+            {
+                if (!row.IsNewRow)
+                {
+                    var task = new
+                    {
+                        Name = row.Cells["task_name"].Value?.ToString(),
+                        Description = row.Cells["task_description"].Value?.ToString(),
+                        Deadline = row.Cells["deadline"].Value?.ToString(),
+                        Priority = row.Cells["priority_task"].Value?.ToString()
+                    };
+                    tasks.Add(task);
+                }
+            }
+
+            string json = JsonConvert.SerializeObject(tasks, Formatting.Indented);
+            File.WriteAllText(jsonFilePath, json);
+        }
 
         // buttons
         private void bttnAdd_Click(object sender, EventArgs e)
@@ -99,7 +103,6 @@ namespace tasker
 
         private void bttnEdit_Click(object sender, EventArgs e)
         {
-     
             deadlineTask = monthCalendar.SelectionStart.ToString("dd.MM.yyyy");
             if (dataGridView.CurrentRow != null)
             {
@@ -127,17 +130,6 @@ namespace tasker
                 dataGridView.Rows.RemoveAt(dataGridView.CurrentRow.Index);
             }
         }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void calendar_DateChanged(object sender, DateRangeEventArgs e)
-        {
-
-        }
-
 
         // Button response to action
         private void bttn_MouseDown(object sender, MouseEventArgs e)
