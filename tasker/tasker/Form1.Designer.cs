@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
@@ -40,29 +41,27 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.bttnDelete = new System.Windows.Forms.Button();
+            this.bttnEdit = new System.Windows.Forms.Button();
+            this.textTaskDescr = new System.Windows.Forms.TextBox();
+            this.bttnAdd = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.textTaskName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.bttnAdd = new System.Windows.Forms.Button();
-            this.textTaskDescr = new System.Windows.Forms.TextBox();
-            this.textTaskDeadline = new System.Windows.Forms.TextBox();
-            this.bttnEdit = new System.Windows.Forms.Button();
-            this.bttnDelete = new System.Windows.Forms.Button();
+            this.monthCalendar = new System.Windows.Forms.MonthCalendar();
             this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.priority = new System.Windows.Forms.Label();
+            this.priorityTrack = new System.Windows.Forms.TrackBar();
             this.task_name = new System.Windows.Forms.DataGridViewButtonColumn();
             this.task_description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deadline = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priority_task = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.priorityTrack)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -78,7 +77,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Gentium Book Basic", 28.14545F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(187, 25);
+            this.label2.Location = new System.Drawing.Point(415, 20);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(355, 50);
             this.label2.TabIndex = 1;
@@ -110,84 +109,101 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 37);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(192, 59);
+            this.tabPage2.Size = new System.Drawing.Size(0, 0);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(21, 47);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(138, 32);
-            this.checkBox1.TabIndex = 4;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.checkBox3);
-            this.groupBox1.Controls.Add(this.checkBox2);
-            this.groupBox1.Controls.Add(this.checkBox1);
-            this.groupBox1.Location = new System.Drawing.Point(910, 305);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(325, 178);
-            this.groupBox1.TabIndex = 5;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "to do:";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(21, 86);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(138, 32);
-            this.checkBox2.TabIndex = 5;
-            this.checkBox2.Text = "checkBox2";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(21, 125);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(137, 32);
-            this.checkBox3.TabIndex = 6;
-            this.checkBox3.Text = "checkBox3";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(246)))));
+            this.groupBox2.Controls.Add(this.priorityTrack);
+            this.groupBox2.Controls.Add(this.priority);
             this.groupBox2.Controls.Add(this.bttnDelete);
+            this.groupBox2.Controls.Add(this.monthCalendar);
             this.groupBox2.Controls.Add(this.bttnEdit);
-            this.groupBox2.Controls.Add(this.textTaskDeadline);
             this.groupBox2.Controls.Add(this.textTaskDescr);
             this.groupBox2.Controls.Add(this.bttnAdd);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.textTaskName);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Location = new System.Drawing.Point(24, 104);
+            this.groupBox2.Location = new System.Drawing.Point(221, 94);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(821, 301);
+            this.groupBox2.Size = new System.Drawing.Size(828, 370);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "to do:";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
-            // monthCalendar1
+            // bttnDelete
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(920, 77);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 10;
+            this.bttnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(195)))), ((int)(((byte)(178)))));
+            this.bttnDelete.Location = new System.Drawing.Point(323, 297);
+            this.bttnDelete.Name = "bttnDelete";
+            this.bttnDelete.Size = new System.Drawing.Size(108, 49);
+            this.bttnDelete.TabIndex = 20;
+            this.bttnDelete.TabStop = false;
+            this.bttnDelete.Text = "delete";
+            this.bttnDelete.UseVisualStyleBackColor = true;
+            this.bttnDelete.Click += new System.EventHandler(this.bttnDelete_Click);
+            // 
+            // bttnEdit
+            // 
+            this.bttnEdit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(103)))), ((int)(((byte)(215)))));
+            this.bttnEdit.Location = new System.Drawing.Point(172, 297);
+            this.bttnEdit.Name = "bttnEdit";
+            this.bttnEdit.Size = new System.Drawing.Size(108, 49);
+            this.bttnEdit.TabIndex = 19;
+            this.bttnEdit.Text = "edit";
+            this.bttnEdit.UseVisualStyleBackColor = true;
+            this.bttnEdit.Click += new System.EventHandler(this.bttnEdit_Click);
+            // 
+            // textTaskDescr
+            // 
+            this.textTaskDescr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textTaskDescr.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.textTaskDescr.Location = new System.Drawing.Point(15, 160);
+            this.textTaskDescr.Name = "textTaskDescr";
+            this.textTaskDescr.Size = new System.Drawing.Size(416, 35);
+            this.textTaskDescr.TabIndex = 17;
+            // 
+            // bttnAdd
+            // 
+            this.bttnAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(144)))), ((int)(((byte)(145)))));
+            this.bttnAdd.Location = new System.Drawing.Point(22, 297);
+            this.bttnAdd.Name = "bttnAdd";
+            this.bttnAdd.Size = new System.Drawing.Size(108, 49);
+            this.bttnAdd.TabIndex = 16;
+            this.bttnAdd.Text = "add";
+            this.bttnAdd.UseVisualStyleBackColor = true;
+            this.bttnAdd.Click += new System.EventHandler(this.bttnAdd_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(554, 42);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(151, 28);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "task deadline:";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(10, 129);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(180, 28);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "task description:";
             // 
             // textTaskName
             // 
             this.textTaskName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textTaskName.ForeColor = System.Drawing.SystemColors.ScrollBar;
+            this.textTaskName.ForeColor = System.Drawing.SystemColors.InfoText;
             this.textTaskName.Location = new System.Drawing.Point(15, 79);
             this.textTaskName.Margin = new System.Windows.Forms.Padding(15);
             this.textTaskName.Name = "textTaskName";
@@ -206,125 +222,101 @@
             this.label3.Text = "task name:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // label4
+            // monthCalendar
             // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(10, 129);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(180, 28);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "task description:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(10, 212);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(104, 28);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "deadline:";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // bttnAdd
-            // 
-            this.bttnAdd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(144)))), ((int)(((byte)(145)))));
-            this.bttnAdd.Location = new System.Drawing.Point(618, 79);
-            this.bttnAdd.Name = "bttnAdd";
-            this.bttnAdd.Size = new System.Drawing.Size(108, 49);
-            this.bttnAdd.TabIndex = 16;
-            this.bttnAdd.Text = "add";
-            this.bttnAdd.UseVisualStyleBackColor = true;
-            this.bttnAdd.Click += new System.EventHandler(this.bttnAdd_Click);
-            // 
-            // textTaskDescr
-            // 
-            this.textTaskDescr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textTaskDescr.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.textTaskDescr.Location = new System.Drawing.Point(15, 160);
-            this.textTaskDescr.Name = "textTaskDescr";
-            this.textTaskDescr.Size = new System.Drawing.Size(416, 35);
-            this.textTaskDescr.TabIndex = 17;
-            // 
-            // textTaskDeadline
-            // 
-            this.textTaskDeadline.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textTaskDeadline.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.textTaskDeadline.Location = new System.Drawing.Point(15, 243);
-            this.textTaskDeadline.Name = "textTaskDeadline";
-            this.textTaskDeadline.Size = new System.Drawing.Size(416, 35);
-            this.textTaskDeadline.TabIndex = 18;
-            // 
-            // bttnEdit
-            // 
-            this.bttnEdit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(103)))), ((int)(((byte)(215)))));
-            this.bttnEdit.Location = new System.Drawing.Point(618, 152);
-            this.bttnEdit.Name = "bttnEdit";
-            this.bttnEdit.Size = new System.Drawing.Size(108, 49);
-            this.bttnEdit.TabIndex = 19;
-            this.bttnEdit.Text = "edit";
-            this.bttnEdit.UseVisualStyleBackColor = true;
-            this.bttnEdit.Click += new System.EventHandler(this.bttnEdit_Click);
-            // 
-            // bttnDelete
-            // 
-            this.bttnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(195)))), ((int)(((byte)(178)))));
-            this.bttnDelete.Location = new System.Drawing.Point(618, 229);
-            this.bttnDelete.Name = "bttnDelete";
-            this.bttnDelete.Size = new System.Drawing.Size(108, 49);
-            this.bttnDelete.TabIndex = 20;
-            this.bttnDelete.TabStop = false;
-            this.bttnDelete.Text = "delete";
-            this.bttnDelete.UseVisualStyleBackColor = true;
-            this.bttnDelete.Click += new System.EventHandler(this.bttnDelete_Click);
+            this.monthCalendar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(235)))), ((int)(((byte)(221)))));
+            this.monthCalendar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(235)))), ((int)(((byte)(221)))));
+            this.monthCalendar.Location = new System.Drawing.Point(549, 79);
+            this.monthCalendar.Name = "monthCalendar";
+            this.monthCalendar.TabIndex = 10;
+            this.monthCalendar.TitleBackColor = System.Drawing.SystemColors.Desktop;
+            this.monthCalendar.TrailingForeColor = System.Drawing.Color.Gray;
+            this.monthCalendar.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.calendar_DateChanged);
             // 
             // dataGridView
             // 
+            this.dataGridView.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.dataGridView.AllowUserToAddRows = false;
             this.dataGridView.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(10);
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft YaHei", 13.74545F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             this.dataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.dataGridView.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Gentium Book Basic", 15.70909F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft YaHei", 13.74545F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Gray;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.ColumnHeadersHeight = 50;
             this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.task_name,
             this.task_description,
-            this.deadline});
+            this.deadline,
+            this.priority_task});
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft YaHei", 13.74545F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView.DefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.dataGridView.Location = new System.Drawing.Point(10, 489);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.ReadOnly = true;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Gentium Book Basic", 15.70909F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(10);
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft YaHei", 13.74545F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(10);
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView.RowHeadersWidth = 47;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.InfoText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(144)))), ((int)(((byte)(145)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridView.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(223)))), ((int)(((byte)(233)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft YaHei", 13.74545F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(223)))), ((int)(((byte)(233)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Gray;
+            this.dataGridView.RowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView.Size = new System.Drawing.Size(1255, 285);
             this.dataGridView.TabIndex = 11;
             this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // priority
+            // 
+            this.priority.AutoSize = true;
+            this.priority.ForeColor = System.Drawing.Color.Black;
+            this.priority.Location = new System.Drawing.Point(17, 226);
+            this.priority.Name = "priority";
+            this.priority.Size = new System.Drawing.Size(91, 28);
+            this.priority.TabIndex = 21;
+            this.priority.Text = "priority";
+            // 
+            // priorityTrack
+            // 
+            this.priorityTrack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.priorityTrack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.priorityTrack.Location = new System.Drawing.Point(136, 213);
+            this.priorityTrack.Name = "priorityTrack";
+            this.priorityTrack.Size = new System.Drawing.Size(295, 50);
+            this.priorityTrack.TabIndex = 22;
             // 
             // task_name
             // 
@@ -358,6 +350,13 @@
             this.deadline.Name = "deadline";
             this.deadline.ReadOnly = true;
             // 
+            // priority_task
+            // 
+            this.priority_task.HeaderText = "priority";
+            this.priority_task.MinimumWidth = 6;
+            this.priority_task.Name = "priority_task";
+            this.priority_task.ReadOnly = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 28F);
@@ -365,26 +364,23 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(1275, 784);
             this.Controls.Add(this.dataGridView);
-            this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Gentium Book Basic", 15.70909F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";
             this.Padding = new System.Windows.Forms.Padding(10);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = resources.GetString("$this.Text");
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.priorityTrack)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -397,25 +393,23 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.MonthCalendar monthCalendar;
         private System.Windows.Forms.TextBox textTaskName;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button bttnAdd;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textTaskDeadline;
         private System.Windows.Forms.TextBox textTaskDescr;
         private System.Windows.Forms.Button bttnDelete;
         private System.Windows.Forms.Button bttnEdit;
         private System.Windows.Forms.DataGridView dataGridView;
+        private System.Windows.Forms.Label priority;
+        private System.Windows.Forms.TrackBar priorityTrack;
         private System.Windows.Forms.DataGridViewButtonColumn task_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn task_description;
         private System.Windows.Forms.DataGridViewTextBoxColumn deadline;
+        private System.Windows.Forms.DataGridViewTextBoxColumn priority_task;
     }
 }
 

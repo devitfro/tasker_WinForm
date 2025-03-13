@@ -69,30 +69,57 @@ namespace tasker
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+          
 
         }
 
+        private string deadlineTask;
 
         // buttons
         private void bttnAdd_Click(object sender, EventArgs e)
         {
-            dataGridView.Rows.Add(textTaskName.Text, textTaskDescr.Text, textTaskDeadline.Text);
-     
+            deadlineTask = monthCalendar.SelectionStart.ToString("dd.MM.yyyy");
+
+            dataGridView.Rows.Add(textTaskName.Text, textTaskDescr.Text, deadlineTask, priorityTrack.Value + " %");
+            textTaskName.Text = null;
+            textTaskDescr.Text = null;
+
+            // Set the current date in the calendar
+            monthCalendar.SelectionStart = DateTime.Now;
+            monthCalendar.SelectionEnd = DateTime.Now;
         }
 
         private void bttnEdit_Click(object sender, EventArgs e)
         {
+            deadlineTask = monthCalendar.SelectionStart.ToString("dd.MM.yyyy");
+            if (dataGridView.CurrentRow != null)
+            {
+                dataGridView.CurrentRow.Cells["task_name"].Value = textTaskName.Text;
+                dataGridView.CurrentRow.Cells["task_description"].Value = textTaskDescr.Text;
+                dataGridView.CurrentRow.Cells["deadline"].Value = deadlineTask;
+                dataGridView.CurrentRow.Cells["priority_task"].Value = priorityTrack.Value + " %";
+            }
 
+            // Set the current date in the calendar
+            monthCalendar.SelectionStart = DateTime.Now;
+            monthCalendar.SelectionEnd = DateTime.Now;
         }
 
       
 
         private void bttnDelete_Click(object sender, EventArgs e)
         {
-
+            if (dataGridView.CurrentRow != null) {
+                dataGridView.Rows.RemoveAt(dataGridView.CurrentRow.Index);
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void calendar_DateChanged(object sender, DateRangeEventArgs e)
         {
 
         }
