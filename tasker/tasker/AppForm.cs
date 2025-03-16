@@ -71,7 +71,7 @@ namespace tasker
 
             if (!string.IsNullOrWhiteSpace(textTaskName.Text) && !string.IsNullOrWhiteSpace(textTaskDescr.Text))
             {
-                // Используем фабричный метод для создания задачи
+                // Using a factory method to create a task
                 var task = TaskFactory.CreateTask(
                     textTaskName.Text,
                     textTaskDescr.Text,
