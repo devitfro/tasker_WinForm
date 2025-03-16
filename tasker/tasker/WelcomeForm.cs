@@ -11,14 +11,11 @@ using System.Windows.Forms;
 
 namespace tasker
 {
-    public partial class WelcomeForm : Form
+    public partial class WelcomeForm : FormBase
     {
-        DataBase dataBase = new DataBase();
-
         public WelcomeForm()
         {
-            InitializeComponent();
-            StartPosition = FormStartPosition.CenterScreen;
+            InitializeComponent();         
         }
 
         private void label1_Click(object sender, EventArgs e) { }

@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 
 namespace tasker
 {
-    internal class DataBase
+    public class DataBase
     {
         //Console.OutputEncoding = System.Text.Encoding.UTF8;
 

@@ -12,15 +12,11 @@ using System.IO;
 
 namespace tasker
 {
-
-    public partial class RegistrationForm : Form
+    public partial class RegistrationForm : FormBase
     {
-        DataBase dataBase = new DataBase();
-
         public RegistrationForm()
         {
             InitializeComponent();
-            StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void label3_Click(object sender, EventArgs e) { }

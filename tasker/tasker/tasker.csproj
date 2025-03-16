@@ -167,6 +167,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataBase.cs" />
+    <Compile Include="FormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="GlobalData.cs" />
     <Compile Include="RegistrationForm.cs">
       <SubType>Form</SubType>

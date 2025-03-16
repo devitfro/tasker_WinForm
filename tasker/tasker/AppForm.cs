@@ -14,14 +14,11 @@ using System.Collections;
 
 namespace tasker
 {
-    public partial class AppForm : Form
+    public partial class AppForm : FormBase
     {
-        DataBase dataBase = new DataBase();
-
         public AppForm()
         {
             InitializeComponent();
-            StartPosition = FormStartPosition.CenterScreen;
             LoadUserData();
             LoadTasksFromDatabase();
         }
