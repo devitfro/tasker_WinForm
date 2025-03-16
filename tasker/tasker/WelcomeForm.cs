@@ -36,32 +36,8 @@ namespace tasker
             var loginUser = loginWelcome.Text;
             var passwordUser = passwordWelcome.Text;
 
-            //SqlDataAdapter adapter = new SqlDataAdapter();
-            //DataTable table = new DataTable();
+            string query = "SELECT id, login, password FROM [User] WHERE login = @login AND password = @password";
 
-            //string query = $"SELECT id, login, password FROM [User] WHERE login = '{loginUser}' and password = '{passwordUser}'";
-
-            //SqlCommand command = new SqlCommand(query, dataBase.GetConnection());
-
-            //adapter.SelectCommand = command;
-            //adapter.Fill(table);
-
-            //if (table.Rows.Count == 1)
-            //{
-            //    MessageBox.Show("You enter!", "Good!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //    AppForm appForm = new AppForm();
-            //    //Application.Run(new AppForm());
-            //    this.Hide();
-            //    appForm.ShowDialog();
-            //}
-            //else
-            //{
-            //    MessageBox.Show("You not enter!", "No!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //}
-
-            // WITH USING
-
-            string query = "SELECT id, login, password FROM User WHERE login = @login AND password = @password";
             using (SqlCommand command = new SqlCommand(query, dataBase.GetConnection()))
             {
                 command.Parameters.AddWithValue("@login", loginUser);
@@ -85,11 +61,6 @@ namespace tasker
             }
         }
 
-        private void bttnCreateWelcome_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtLoginWelcome_Changed(object sender, EventArgs e)
         {
 
@@ -98,6 +69,19 @@ namespace tasker
         private void txtPasswordWelcome_Changed(object sender, EventArgs e)
         {
             passwordWelcome.PasswordChar = '*';
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            RegistrationForm registForm = new RegistrationForm();
+
+            registForm.Show();
+            this.Hide();
+        }
+
+        private void WelcomeForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
