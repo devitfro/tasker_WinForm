@@ -16,13 +16,16 @@ namespace tasker
 {
     public partial class AppForm : FormBase
     {
+        private string deadlineTask;
+
+        private List<TaskBase> tasks = new List<TaskBase>();
+
         public AppForm()
         {
             InitializeComponent();
             LoadUserData();
             LoadTasksFromDatabase();
         }
-
         private void Form1_Load(object sender, EventArgs e) { }
 
         private void label2_Click(object sender, EventArgs e) { }
@@ -61,43 +64,104 @@ namespace tasker
 
         private void helloBox_Enter(object sender, EventArgs e) { }
 
-        // Start function
-        private string deadlineTask;
-
-        // Buttons
+        // Button add task
         private void bttnAdd_Click(object sender, EventArgs e)
         {
-            deadlineTask = monthCalendar.SelectionStart.ToString("dd.MM.yyyy");
+            string deadlineTask = monthCalendar.SelectionStart.ToString("dd.MM.yyyy");
 
             if (!string.IsNullOrWhiteSpace(textTaskName.Text) && !string.IsNullOrWhiteSpace(textTaskDescr.Text))
             {
-                dataGridView.Rows.Add(textTaskName.Text, textTaskDescr.Text, deadlineTask, priorityTrack.Value + " %");
-                SaveTaskToDatabase(textTaskName.Text, textTaskDescr.Text, deadlineTask, priorityTrack.Value);
-                textTaskName.Text = null;
-                textTaskDescr.Text = null;
+                // Используем фабричный метод для создания задачи
+                var task = TaskFactory.CreateTask(
+                    textTaskName.Text,
+                    textTaskDescr.Text,
+                    deadlineTask,
+                    priorityTrack.Value
+                );
 
-                // Set the current date in the calendar
+                tasks.Add(task);
+                SaveTaskToDatabase(task); // Save to db
+                UpdateTaskList();
+
+                // Default data
+                textTaskName.Text = string.Empty;
+                textTaskDescr.Text = string.Empty;
+
+                // Default data
                 monthCalendar.SelectionStart = DateTime.Now;
                 monthCalendar.SelectionEnd = DateTime.Now;
             }
             else
             {
-                // Display an error message if one of the fields is empty
                 MessageBox.Show("Please fill in all fields before adding a task.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
+        // Update task list
+        private void UpdateTaskList()
+        {
+            dataGridView.Rows.Clear();
+            foreach (var task in tasks)
+            {
+                dataGridView.Rows.Add(task.Name, task.Description, task.Deadline, $"{task.Priority} %");
+                task.DisplayDetails(); // Выводим детали каждой задачи
+            }
+        }
+
+        //  Save task to Database
+        private void SaveTaskToDatabase(TaskBase task)
+        {
+            string query = @"INSERT INTO Task (Name, Description, Deadline, Priority, userID) 
+                     VALUES (@Name, @Description, @Deadline, @Priority, @userID)";
+
+            try
+            {
+                using (SqlCommand command = new SqlCommand(query, dataBase.GetConnection()))
+                {
+                    if (command.Connection.State == ConnectionState.Closed)
+                    {
+                        command.Connection.Open();
+                    }
+
+                    command.Parameters.AddWithValue("@userID", GlobalData.UserId);
+                    command.Parameters.AddWithValue("@Name", task.Name);
+                    command.Parameters.AddWithValue("@Description", task.Description);
+                    command.Parameters.AddWithValue("@Deadline", task.Deadline);
+                    command.Parameters.AddWithValue("@Priority", task.Priority);
+
+                    int result = command.ExecuteNonQuery();
+                    if (result > 0)
+                    {
+                        MessageBox.Show("Task saved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to save task.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                    dataBase.OpenConnection();
+                    command.ExecuteNonQuery();
+                    dataBase.CloseConnection();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        // Buttons
         private void bttnEdit_Click(object sender, EventArgs e)
         {
             deadlineTask = monthCalendar.SelectionStart.ToString("dd.MM.yyyy");
             if (dataGridView.CurrentRow != null)
             {
-                if(!String.IsNullOrWhiteSpace(textTaskName.Text) || !string.IsNullOrWhiteSpace(textTaskDescr.Text))
+                if (!String.IsNullOrWhiteSpace(textTaskName.Text) || !string.IsNullOrWhiteSpace(textTaskDescr.Text))
                 {
                     dataGridView.CurrentRow.Cells["task_name"].Value = textTaskName.Text;
                     dataGridView.CurrentRow.Cells["task_description"].Value = textTaskDescr.Text;
                 }
-               
+
                 dataGridView.CurrentRow.Cells["deadline"].Value = deadlineTask;
                 dataGridView.CurrentRow.Cells["priority_task"].Value = priorityTrack.Value + " %";
             }
@@ -112,7 +176,8 @@ namespace tasker
 
         private void bttnDelete_Click(object sender, EventArgs e)
         {
-            if (dataGridView.CurrentRow != null) {
+            if (dataGridView.CurrentRow != null)
+            {
                 dataGridView.Rows.RemoveAt(dataGridView.CurrentRow.Index);
             }
         }
@@ -157,49 +222,7 @@ namespace tasker
             }
         }
 
-        // Save tasks to the database
-        private void SaveTaskToDatabase(string name, string description, string deadline, int priority)
-        {
-            string query = @"INSERT INTO Task (userID, [name], [description], deadline, priority)
-                            VALUES (@userID, @name, @description, @deadline, @priority)";
-
-            try 
-            {
-                using (SqlCommand command = new SqlCommand(query, dataBase.GetConnection()))
-                {
-                    // Check if the connection is closed, we open it
-                    if (command.Connection.State == ConnectionState.Closed)
-                    {
-                        command.Connection.Open();
-                    }
-
-                    command.Parameters.AddWithValue("@userID", GlobalData.UserId);
-                    command.Parameters.AddWithValue("@name", name);
-                    command.Parameters.AddWithValue("@description", description);
-                    //command.Parameters.Add("@name", SqlDbType.NVarChar, 50).Value = name;
-                    //command.Parameters.Add("@description", SqlDbType.NVarChar, 255).Value = description;
-
-                    command.Parameters.AddWithValue("@deadline", deadline);
-                    command.Parameters.AddWithValue("@priority", priority);
-
-                    int result = command.ExecuteNonQuery();
-                    if (result > 0)
-                    {
-                        MessageBox.Show("Task saved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Failed to save task.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        // Load user photo to picture box or set dafault
+        //Load user photo to picture box or set dafault
         private void LoadUserData()
         {
             string query = "SELECT login, photo FROM [User] WHERE id = @userID";
@@ -268,11 +291,11 @@ namespace tasker
                         dataGridView.Rows.Add(taskName, taskDescription, deadline, priority);
                     }
                 }
-
                 dataBase.CloseConnection();
             }
         }
 
+        // Exit
         private void bttnExit_Click(object sender, EventArgs e)
         {
             // Exit the application
@@ -280,3 +303,4 @@ namespace tasker
         }
     }
 }
+

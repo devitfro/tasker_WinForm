@@ -6,18 +6,15 @@ using System.Windows.Forms;
 
 namespace tasker
 {
-    internal static class Program
+
+    internal static partial class Program
     {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new WelcomeForm());
-            //Application.Run(new AppForm());
         }
     }
 }

@@ -7,7 +7,27 @@
       "RelativeMoniker": "D:0:0:{07B9D595-F7A5-4C03-8DE1-9EA25B2A9A4F}|tasker\\tasker.csproj|solutionrelative:tasker\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{07B9D595-F7A5-4C03-8DE1-9EA25B2A9A4F}|tasker\\tasker.csproj|D:\\development\\projects\\tasker_WinForm\\tasker\\tasker\\welcomeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{07B9D595-F7A5-4C03-8DE1-9EA25B2A9A4F}|tasker\\tasker.csproj|d:\\development\\projects\\tasker_winform\\tasker\\tasker\\formbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07B9D595-F7A5-4C03-8DE1-9EA25B2A9A4F}|tasker\\tasker.csproj|solutionrelative:tasker\\formbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07B9D595-F7A5-4C03-8DE1-9EA25B2A9A4F}|tasker\\tasker.csproj|d:\\development\\projects\\tasker_winform\\tasker\\tasker\\formbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{07B9D595-F7A5-4C03-8DE1-9EA25B2A9A4F}|tasker\\tasker.csproj|solutionrelative:tasker\\formbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07B9D595-F7A5-4C03-8DE1-9EA25B2A9A4F}|tasker\\tasker.csproj|d:\\development\\projects\\tasker_winform\\tasker\\tasker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07B9D595-F7A5-4C03-8DE1-9EA25B2A9A4F}|tasker\\tasker.csproj|solutionrelative:tasker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07B9D595-F7A5-4C03-8DE1-9EA25B2A9A4F}|tasker\\tasker.csproj|d:\\development\\projects\\tasker_winform\\tasker\\tasker\\registrationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07B9D595-F7A5-4C03-8DE1-9EA25B2A9A4F}|tasker\\tasker.csproj|solutionrelative:tasker\\registrationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07B9D595-F7A5-4C03-8DE1-9EA25B2A9A4F}|tasker\\tasker.csproj|d:\\development\\projects\\tasker_winform\\tasker\\tasker\\registrationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{07B9D595-F7A5-4C03-8DE1-9EA25B2A9A4F}|tasker\\tasker.csproj|solutionrelative:tasker\\registrationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07B9D595-F7A5-4C03-8DE1-9EA25B2A9A4F}|tasker\\tasker.csproj|d:\\development\\projects\\tasker_winform\\tasker\\tasker\\welcomeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{07B9D595-F7A5-4C03-8DE1-9EA25B2A9A4F}|tasker\\tasker.csproj|solutionrelative:tasker\\welcomeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -15,20 +35,20 @@
       "RelativeMoniker": "D:0:0:{07B9D595-F7A5-4C03-8DE1-9EA25B2A9A4F}|tasker\\tasker.csproj|solutionrelative:tasker\\welcomeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{07B9D595-F7A5-4C03-8DE1-9EA25B2A9A4F}|tasker\\tasker.csproj|D:\\development\\projects\\tasker_WinForm\\tasker\\tasker\\appform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{07B9D595-F7A5-4C03-8DE1-9EA25B2A9A4F}|tasker\\tasker.csproj|d:\\development\\projects\\tasker_winform\\tasker\\tasker\\appform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{07B9D595-F7A5-4C03-8DE1-9EA25B2A9A4F}|tasker\\tasker.csproj|solutionrelative:tasker\\appform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{07B9D595-F7A5-4C03-8DE1-9EA25B2A9A4F}|tasker\\tasker.csproj|D:\\development\\projects\\tasker_WinForm\\tasker\\tasker\\appform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{07B9D595-F7A5-4C03-8DE1-9EA25B2A9A4F}|tasker\\tasker.csproj|d:\\development\\projects\\tasker_winform\\tasker\\tasker\\appform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{07B9D595-F7A5-4C03-8DE1-9EA25B2A9A4F}|tasker\\tasker.csproj|solutionrelative:tasker\\appform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{07B9D595-F7A5-4C03-8DE1-9EA25B2A9A4F}|tasker\\tasker.csproj|d:\\development\\projects\\tasker_winform\\tasker\\tasker\\registrationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{07B9D595-F7A5-4C03-8DE1-9EA25B2A9A4F}|tasker\\tasker.csproj|solutionrelative:tasker\\registrationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{07B9D595-F7A5-4C03-8DE1-9EA25B2A9A4F}|tasker\\tasker.csproj|d:\\development\\projects\\tasker_winform\\tasker\\tasker\\taskfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07B9D595-F7A5-4C03-8DE1-9EA25B2A9A4F}|tasker\\tasker.csproj|solutionrelative:tasker\\taskfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{07B9D595-F7A5-4C03-8DE1-9EA25B2A9A4F}|tasker\\tasker.csproj|D:\\development\\projects\\tasker_WinForm\\tasker\\tasker\\registrationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{07B9D595-F7A5-4C03-8DE1-9EA25B2A9A4F}|tasker\\tasker.csproj|solutionrelative:tasker\\registrationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{07B9D595-F7A5-4C03-8DE1-9EA25B2A9A4F}|tasker\\tasker.csproj|d:\\development\\projects\\tasker_winform\\tasker\\tasker\\taskmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07B9D595-F7A5-4C03-8DE1-9EA25B2A9A4F}|tasker\\tasker.csproj|solutionrelative:tasker\\taskmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -52,85 +72,149 @@
               "RelativeDocumentMoniker": "tasker\\DataBase.cs",
               "ToolTip": "D:\\development\\projects\\tasker_WinForm\\tasker\\tasker\\DataBase.cs",
               "RelativeToolTip": "tasker\\DataBase.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAQwB4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-16T21:23:35.561Z",
+              "WhenOpened": "2025-03-16T22:59:04.517Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormBase.cs",
+              "DocumentMoniker": "D:\\development\\projects\\tasker_WinForm\\tasker\\tasker\\FormBase.cs",
+              "RelativeDocumentMoniker": "tasker\\FormBase.cs",
+              "ToolTip": "D:\\development\\projects\\tasker_WinForm\\tasker\\tasker\\FormBase.cs",
+              "RelativeToolTip": "tasker\\FormBase.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-16T22:58:59.184Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "WelcomeForm.cs [Design]",
-              "DocumentMoniker": "D:\\development\\projects\\tasker_WinForm\\tasker\\tasker\\WelcomeForm.cs",
-              "RelativeDocumentMoniker": "tasker\\WelcomeForm.cs",
-              "ToolTip": "D:\\development\\projects\\tasker_WinForm\\tasker\\tasker\\WelcomeForm.cs [Design]",
-              "RelativeToolTip": "tasker\\WelcomeForm.cs [Design]",
+              "Title": "FormBase.cs [Design]",
+              "DocumentMoniker": "D:\\development\\projects\\tasker_WinForm\\tasker\\tasker\\FormBase.cs",
+              "RelativeDocumentMoniker": "tasker\\FormBase.cs",
+              "ToolTip": "D:\\development\\projects\\tasker_WinForm\\tasker\\tasker\\FormBase.cs [Design]",
+              "RelativeToolTip": "tasker\\FormBase.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-16T21:23:22.682Z",
+              "WhenOpened": "2025-03-16T22:58:57.916Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\development\\projects\\tasker_WinForm\\tasker\\tasker\\Program.cs",
+              "RelativeDocumentMoniker": "tasker\\Program.cs",
+              "ToolTip": "D:\\development\\projects\\tasker_WinForm\\tasker\\tasker\\Program.cs",
+              "RelativeToolTip": "tasker\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-16T22:58:33.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RegistrationForm.cs",
+              "DocumentMoniker": "D:\\development\\projects\\tasker_WinForm\\tasker\\tasker\\RegistrationForm.cs",
+              "RelativeDocumentMoniker": "tasker\\RegistrationForm.cs",
+              "ToolTip": "D:\\development\\projects\\tasker_WinForm\\tasker\\tasker\\RegistrationForm.cs",
+              "RelativeToolTip": "tasker\\RegistrationForm.cs",
+              "ViewState": "AgIAAJEAAAAAAAAAAAAQwKwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-16T22:58:29.662Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "RegistrationForm.cs [Design]",
               "DocumentMoniker": "D:\\development\\projects\\tasker_WinForm\\tasker\\tasker\\RegistrationForm.cs",
               "RelativeDocumentMoniker": "tasker\\RegistrationForm.cs",
               "ToolTip": "D:\\development\\projects\\tasker_WinForm\\tasker\\tasker\\RegistrationForm.cs [Design]",
               "RelativeToolTip": "tasker\\RegistrationForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-16T21:03:34.331Z",
+              "WhenOpened": "2025-03-16T22:58:22.379Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
+              "Title": "WelcomeForm.cs",
+              "DocumentMoniker": "D:\\development\\projects\\tasker_WinForm\\tasker\\tasker\\WelcomeForm.cs",
+              "RelativeDocumentMoniker": "tasker\\WelcomeForm.cs",
+              "ToolTip": "D:\\development\\projects\\tasker_WinForm\\tasker\\tasker\\WelcomeForm.cs",
+              "RelativeToolTip": "tasker\\WelcomeForm.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAQwGkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-16T22:58:17.187Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "WelcomeForm.cs [Design]",
+              "DocumentMoniker": "D:\\development\\projects\\tasker_WinForm\\tasker\\tasker\\WelcomeForm.cs",
+              "RelativeDocumentMoniker": "tasker\\WelcomeForm.cs",
+              "ToolTip": "D:\\development\\projects\\tasker_WinForm\\tasker\\tasker\\WelcomeForm.cs [Design]",
+              "RelativeToolTip": "tasker\\WelcomeForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-16T22:58:16.565Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TaskFactory.cs",
+              "DocumentMoniker": "D:\\development\\projects\\tasker_WinForm\\tasker\\tasker\\TaskFactory.cs",
+              "RelativeDocumentMoniker": "tasker\\TaskFactory.cs",
+              "ToolTip": "D:\\development\\projects\\tasker_WinForm\\tasker\\tasker\\TaskFactory.cs",
+              "RelativeToolTip": "tasker\\TaskFactory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-16T22:57:52.008Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TaskModel.cs",
+              "DocumentMoniker": "D:\\development\\projects\\tasker_WinForm\\tasker\\tasker\\TaskModel.cs",
+              "RelativeDocumentMoniker": "tasker\\TaskModel.cs",
+              "ToolTip": "D:\\development\\projects\\tasker_WinForm\\tasker\\tasker\\TaskModel.cs",
+              "RelativeToolTip": "tasker\\TaskModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-16T22:57:37.832Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AppForm.cs",
+              "DocumentMoniker": "D:\\development\\projects\\tasker_WinForm\\tasker\\tasker\\AppForm.cs",
+              "RelativeDocumentMoniker": "tasker\\AppForm.cs",
+              "ToolTip": "D:\\development\\projects\\tasker_WinForm\\tasker\\tasker\\AppForm.cs",
+              "RelativeToolTip": "tasker\\AppForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-16T22:56:18.215Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "AppForm.cs [Design]",
               "DocumentMoniker": "D:\\development\\projects\\tasker_WinForm\\tasker\\tasker\\AppForm.cs",
               "RelativeDocumentMoniker": "tasker\\AppForm.cs",
               "ToolTip": "D:\\development\\projects\\tasker_WinForm\\tasker\\tasker\\AppForm.cs [Design]",
               "RelativeToolTip": "tasker\\AppForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-16T19:07:49.908Z",
+              "WhenOpened": "2025-03-16T22:56:17.048Z",
               "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AppForm.cs",
-              "DocumentMoniker": "D:\\development\\projects\\tasker_WinForm\\tasker\\tasker\\AppForm.cs",
-              "RelativeDocumentMoniker": "tasker\\AppForm.cs",
-              "ToolTip": "D:\\development\\projects\\tasker_WinForm\\tasker\\tasker\\AppForm.cs",
-              "RelativeToolTip": "tasker\\AppForm.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-16T18:30:36.444Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "WelcomeForm.cs",
-              "DocumentMoniker": "D:\\development\\projects\\tasker_WinForm\\tasker\\tasker\\WelcomeForm.cs",
-              "RelativeDocumentMoniker": "tasker\\WelcomeForm.cs",
-              "ToolTip": "D:\\development\\projects\\tasker_WinForm\\tasker\\tasker\\WelcomeForm.cs",
-              "RelativeToolTip": "tasker\\WelcomeForm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-16T16:52:11.699Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "RegistrationForm.cs",
-              "DocumentMoniker": "D:\\development\\projects\\tasker_WinForm\\tasker\\tasker\\RegistrationForm.cs",
-              "RelativeDocumentMoniker": "tasker\\RegistrationForm.cs",
-              "ToolTip": "D:\\development\\projects\\tasker_WinForm\\tasker\\tasker\\RegistrationForm.cs",
-              "RelativeToolTip": "tasker\\RegistrationForm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-16T16:38:08.895Z",
-              "EditorCaption": ""
             }
           ]
         }

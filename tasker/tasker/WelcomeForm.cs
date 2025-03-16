@@ -15,7 +15,7 @@ namespace tasker
     {
         public WelcomeForm()
         {
-            InitializeComponent();         
+            InitializeComponent();
         }
 
         private void label1_Click(object sender, EventArgs e) { }
@@ -27,6 +27,8 @@ namespace tasker
         private void panel1_Paint(object sender, PaintEventArgs e) { }
 
         private void txtLoginWelcome_Changed(object sender, EventArgs e) { }
+
+        private void WelcomeForm_Load(object sender, EventArgs e) { }
 
         private Boolean CheckWelcomeUser()
         {
@@ -43,31 +45,30 @@ namespace tasker
 
                     dataBase.OpenConnection();
 
-                    // Используем ExecuteReader для получения данных
+                    // Using ExecuteReader to get data
                     using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        if (reader.HasRows) // Если строки найдены
+                        if (reader.HasRows)
                         {
-                            // Читаем данные пользователя
                             reader.Read();
                             string storedPassword = reader["password"].ToString();
 
                             if (storedPassword == passwordUser)
                             {
-                                // Если пароли совпадают
+                                // If the passwords match
                                 GlobalData.UserId = Convert.ToInt32(reader["id"]);
                                 MessageBox.Show("You entered!", "Good!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 return true;
                             }
                             else
                             {
-                                // Если пароли не совпадают
+                                // If the passwords do not match
                                 MessageBox.Show("Incorrect password!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
                         else
                         {
-                            // Если пользователь не найден
+                            // If user not found
                             MessageBox.Show("User not registered!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
@@ -75,10 +76,9 @@ namespace tasker
             }
             catch (Exception ex)
             {
-                // Обработка исключений
                 MessageBox.Show("Error: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-          
+
             return false;
         }
 
@@ -89,7 +89,7 @@ namespace tasker
                 AppForm appForm = new AppForm();
                 this.Hide();
                 appForm.ShowDialog();
-            }       
+            }
         }
 
         private void txtPasswordWelcome_Changed(object sender, EventArgs e)
@@ -104,7 +104,5 @@ namespace tasker
             registForm.Show();
             this.Hide();
         }
-
-        private void WelcomeForm_Load(object sender, EventArgs e) { }
     }
 }
