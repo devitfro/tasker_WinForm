@@ -11,7 +11,6 @@ D:\development\projects\tasker_WinForm\tasker\tasker\bin\Debug\Microsoft.Bcl.Cry
 D:\development\projects\tasker_WinForm\tasker\tasker\bin\Debug\Microsoft.Extensions.Caching.Abstractions.dll
 D:\development\projects\tasker_WinForm\tasker\tasker\bin\Debug\Microsoft.Extensions.Caching.Memory.dll
 D:\development\projects\tasker_WinForm\tasker\tasker\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
-D:\development\projects\tasker_WinForm\tasker\tasker\bin\Debug\Microsoft.Extensions.Configuration.dll
 D:\development\projects\tasker_WinForm\tasker\tasker\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 D:\development\projects\tasker_WinForm\tasker\tasker\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
 D:\development\projects\tasker_WinForm\tasker\tasker\bin\Debug\Microsoft.Extensions.Options.dll
@@ -49,7 +48,6 @@ D:\development\projects\tasker_WinForm\tasker\tasker\bin\Debug\Microsoft.Bcl.Cry
 D:\development\projects\tasker_WinForm\tasker\tasker\bin\Debug\Microsoft.Data.SqlClient.xml
 D:\development\projects\tasker_WinForm\tasker\tasker\bin\Debug\Microsoft.Extensions.Caching.Abstractions.xml
 D:\development\projects\tasker_WinForm\tasker\tasker\bin\Debug\Microsoft.Extensions.Caching.Memory.xml
-D:\development\projects\tasker_WinForm\tasker\tasker\bin\Debug\Microsoft.Extensions.Configuration.xml
 D:\development\projects\tasker_WinForm\tasker\tasker\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
 D:\development\projects\tasker_WinForm\tasker\tasker\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
 D:\development\projects\tasker_WinForm\tasker\tasker\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
@@ -92,7 +90,6 @@ D:\development\projects\tasker_WinForm\tasker\tasker\bin\Debug\ru\Microsoft.Data
 D:\development\projects\tasker_WinForm\tasker\tasker\bin\Debug\tr\Microsoft.Data.SqlClient.resources.dll
 D:\development\projects\tasker_WinForm\tasker\tasker\bin\Debug\zh-Hans\Microsoft.Data.SqlClient.resources.dll
 D:\development\projects\tasker_WinForm\tasker\tasker\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
-D:\development\projects\tasker_WinForm\tasker\tasker\obj\Debug\tasker.RegistrationForm.resources
 D:\development\projects\tasker_WinForm\tasker\tasker\obj\Debug\tasker.WelcomeForm.resources
 D:\development\projects\tasker_WinForm\tasker\tasker\obj\Debug\tasker.AppForm.resources
 D:\development\projects\tasker_WinForm\tasker\tasker\obj\Debug\tasker.Properties.Resources.resources
@@ -102,3 +99,4 @@ D:\development\projects\tasker_WinForm\tasker\tasker\obj\Debug\tasker.csproj.Up2
 D:\development\projects\tasker_WinForm\tasker\tasker\obj\Debug\tasker.exe
 D:\development\projects\tasker_WinForm\tasker\tasker\obj\Debug\tasker.pdb
 D:\development\projects\tasker_WinForm\tasker\tasker\bin\Debug\tasker.pdb
+D:\development\projects\tasker_WinForm\tasker\tasker\obj\Debug\tasker.RegistrationForm.resources

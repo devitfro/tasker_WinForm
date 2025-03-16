@@ -56,9 +56,6 @@
     <Reference Include="Microsoft.Extensions.Caching.Memory, Version=8.0.0.1, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Extensions.Caching.Memory.8.0.1\lib\net462\Microsoft.Extensions.Caching.Memory.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Extensions.Configuration, Version=9.0.0.3, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Extensions.Configuration.9.0.3\lib\net462\Microsoft.Extensions.Configuration.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=9.0.0.3, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Extensions.Configuration.Abstractions.9.0.3\lib\net462\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
     </Reference>
@@ -170,6 +167,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataBase.cs" />
+    <Compile Include="GlobalData.cs" />
     <Compile Include="RegistrationForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -224,7 +222,19 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="img\" />
+    <None Include="img\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\exit.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('..\packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets')" />

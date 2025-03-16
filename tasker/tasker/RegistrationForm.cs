@@ -12,18 +12,18 @@ using System.IO;
 
 namespace tasker
 {
+
     public partial class RegistrationForm : Form
     {
+        DataBase dataBase = new DataBase();
+
         public RegistrationForm()
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
+        private void label3_Click(object sender, EventArgs e) { }
 
         private void panel1_Paint(object sender, PaintEventArgs e) { }
 
@@ -31,19 +31,41 @@ namespace tasker
 
         private void loginRegistration_Changed(object sender, EventArgs e) { }
 
+        private void userBirthday_DateChanged(object sender, DateRangeEventArgs e) { }
+
+        private void pictureBox1_Click(object sender, EventArgs e) { }
+
         private void passwordRegistration_Changed(object sender, EventArgs e)
         {  
             passwordRegistration.PasswordChar = '*';
-        }
-
-        private void passwordRegistrationRepeat_Changed(object sender, EventArgs e)
-        {
-         
             passwordRegistrationRepeat.PasswordChar = '*';
-            
         }
 
-        private bool CheckPasswords()
+        private Boolean CheckUserLogin(string login)
+        {
+            var userLogin = loginRegistration.Text;
+
+            string query = "SELECT login FROM [User]";
+                
+            using (SqlCommand command = new SqlCommand(query, dataBase.GetConnection()))
+            {
+
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                DataTable table = new DataTable();
+                adapter.Fill(table);
+
+                foreach (DataRow row in table.Rows) {
+                    if (row["login"].ToString() == login)
+                    {
+                        MessageBox.Show("Such an account already exists!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return false; 
+                    }
+                }
+                return true;
+            }
+        }
+
+        private Boolean CheckPasswords()
         {
             if (string.IsNullOrWhiteSpace(passwordRegistration.Text) || string.IsNullOrWhiteSpace(passwordRegistrationRepeat.Text))
             {
@@ -57,7 +79,7 @@ namespace tasker
                 return false;
             }
 
-            if (passwordRegistration.Text.Length < 6)
+            if (passwordRegistration.Text.Length < 8)
             {
                 MessageBox.Show("Password must be at least 8 characters long!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
@@ -82,28 +104,26 @@ namespace tasker
 
             if (DateTime.Now < birthday.AddYears(age))
                 age--;
-            
-            return (age > 12);
+            if (age < 12)
+            {
+                MessageBox.Show("Not correct birthday date!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            return true;
         }
 
         private void bttnCreateAcc_Click(object sender, EventArgs e)
         {
+            if (!CheckUserLogin(loginRegistration.Text)) return;
+
             if (!CheckPasswords()) return;
 
-            DataBase dataBase = new DataBase();
+            if (!CheckBirthday(userBirthdayDate.SelectionStart)) return;
+
             var userLogin = loginRegistration.Text;
             var userPassword = passwordRegistration.Text;        
-            DateTime userBirthday;
-
-            if (CheckBirthday(userBirthdayDate.SelectionStart))
-            {
-                userBirthday = userBirthdayDate.SelectionStart;
-            }
-            else
-            {
-                MessageBox.Show("Not correct birthday date!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+            DateTime userBirthday = userBirthdayDate.SelectionStart; ;
 
             byte[] photoBytes = ImageToByteArray(userImgBox.Image);
            
@@ -125,7 +145,7 @@ namespace tasker
                 dataBase.OpenConnection();
 
                 if (command.ExecuteNonQuery() == 1)
-                {
+                {            
                     MessageBox.Show("Create an account successfully!");
                     WelcomeForm welcomeForm = new WelcomeForm();
                     welcomeForm.Show();
@@ -135,7 +155,8 @@ namespace tasker
                 {
                     MessageBox.Show("Error!");
                 }
-            }           
+            }
+             //GetUserId();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -151,9 +172,5 @@ namespace tasker
                 }
             }
         }
-
-        private void userBirthday_DateChanged(object sender, DateRangeEventArgs e) { }
-
-        private void pictureBox1_Click(object sender, EventArgs e) { }
     }
 }

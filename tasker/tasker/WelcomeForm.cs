@@ -13,7 +13,6 @@ namespace tasker
 {
     public partial class WelcomeForm : Form
     {
-
         DataBase dataBase = new DataBase();
 
         public WelcomeForm()
@@ -30,40 +29,70 @@ namespace tasker
 
         private void panel1_Paint(object sender, PaintEventArgs e) { }
 
+        private void txtLoginWelcome_Changed(object sender, EventArgs e) { }
 
-        private void bttnEnterWelcome_Click(object sender, EventArgs e)
+        private Boolean CheckWelcomeUser()
         {
             var loginUser = loginWelcome.Text;
             var passwordUser = passwordWelcome.Text;
 
-            string query = "SELECT id, login, password FROM [User] WHERE login = @login AND password = @password";
+            string query = "SELECT id, password FROM [User] WHERE login = @login";
 
-            using (SqlCommand command = new SqlCommand(query, dataBase.GetConnection()))
+            try
             {
-                command.Parameters.AddWithValue("@login", loginUser);
-                command.Parameters.AddWithValue("@password", passwordUser);
-
-                SqlDataAdapter adapter = new SqlDataAdapter(command);
-                DataTable table = new DataTable();
-                adapter.Fill(table);
-
-                if (table.Rows.Count == 1)
+                using (SqlCommand command = new SqlCommand(query, dataBase.GetConnection()))
                 {
-                    MessageBox.Show("You enter!", "Good!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    AppForm appForm = new AppForm();
-                    this.Hide();
-                    appForm.ShowDialog();
-                }
-                else
-                {
-                    MessageBox.Show("You not enter!", "No!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    command.Parameters.AddWithValue("@login", loginUser);
+
+                    dataBase.OpenConnection();
+
+                    // Используем ExecuteReader для получения данных
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.HasRows) // Если строки найдены
+                        {
+                            // Читаем данные пользователя
+                            reader.Read();
+                            string storedPassword = reader["password"].ToString();
+
+                            if (storedPassword == passwordUser)
+                            {
+                                // Если пароли совпадают
+                                GlobalData.UserId = Convert.ToInt32(reader["id"]);
+                                MessageBox.Show("You entered!", "Good!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                return true;
+                            }
+                            else
+                            {
+                                // Если пароли не совпадают
+                                MessageBox.Show("Incorrect password!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                        else
+                        {
+                            // Если пользователь не найден
+                            MessageBox.Show("User not registered!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
                 }
             }
+            catch (Exception ex)
+            {
+                // Обработка исключений
+                MessageBox.Show("Error: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+          
+            return false;
         }
 
-        private void txtLoginWelcome_Changed(object sender, EventArgs e)
+        private void bttnEnterWelcome_Click(object sender, EventArgs e)
         {
-
+            if (CheckWelcomeUser())
+            {
+                AppForm appForm = new AppForm();
+                this.Hide();
+                appForm.ShowDialog();
+            }       
         }
 
         private void txtPasswordWelcome_Changed(object sender, EventArgs e)
@@ -79,9 +108,6 @@ namespace tasker
             this.Hide();
         }
 
-        private void WelcomeForm_Load(object sender, EventArgs e)
-        {
-
-        }
+        private void WelcomeForm_Load(object sender, EventArgs e) { }
     }
 }

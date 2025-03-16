@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.userImgBox = new System.Windows.Forms.PictureBox();
             this.userBirthdayDate = new System.Windows.Forms.MonthCalendar();
             this.label5 = new System.Windows.Forms.Label();
             this.passwordRegistrationRepeat = new System.Windows.Forms.TextBox();
@@ -41,10 +45,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.userImgBox = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userImgBox)).BeginInit();
             this.SuspendLayout();
@@ -73,6 +73,52 @@
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft YaHei", 15.70909F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(119)))), ((int)(((byte)(81)))));
+            this.label7.Location = new System.Drawing.Point(678, 366);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(149, 31);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "your image:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 15.70909F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(119)))), ((int)(((byte)(81)))));
+            this.label6.Location = new System.Drawing.Point(639, 205);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(376, 31);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "you can load your profile image";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(168)))), ((int)(((byte)(133)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.74545F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(4)))), ((int)(((byte)(68)))));
+            this.button1.Location = new System.Drawing.Point(1039, 194);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(181, 56);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "load";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // userImgBox
+            // 
+            this.userImgBox.Location = new System.Drawing.Point(901, 316);
+            this.userImgBox.Name = "userImgBox";
+            this.userImgBox.Size = new System.Drawing.Size(143, 140);
+            this.userImgBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.userImgBox.TabIndex = 13;
+            this.userImgBox.TabStop = false;
+            this.userImgBox.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // userBirthdayDate
             // 
             this.userBirthdayDate.Location = new System.Drawing.Point(354, 345);
@@ -98,7 +144,7 @@
             this.passwordRegistrationRepeat.Name = "passwordRegistrationRepeat";
             this.passwordRegistrationRepeat.Size = new System.Drawing.Size(261, 35);
             this.passwordRegistrationRepeat.TabIndex = 10;
-            this.passwordRegistrationRepeat.TextChanged += new System.EventHandler(this.passwordRegistrationRepeat_Changed);
+            this.passwordRegistrationRepeat.TextChanged += new System.EventHandler(this.passwordRegistration_Changed);
             // 
             // label4
             // 
@@ -195,52 +241,6 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // userImgBox
-            // 
-            this.userImgBox.Location = new System.Drawing.Point(901, 316);
-            this.userImgBox.Name = "userImgBox";
-            this.userImgBox.Size = new System.Drawing.Size(143, 140);
-            this.userImgBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.userImgBox.TabIndex = 13;
-            this.userImgBox.TabStop = false;
-            this.userImgBox.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(168)))), ((int)(((byte)(133)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.74545F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(4)))), ((int)(((byte)(68)))));
-            this.button1.Location = new System.Drawing.Point(1039, 194);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(181, 56);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "load";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 15.70909F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(119)))), ((int)(((byte)(81)))));
-            this.label6.Location = new System.Drawing.Point(639, 205);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(376, 31);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "you can load your profile image";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft YaHei", 15.70909F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(119)))), ((int)(((byte)(81)))));
-            this.label7.Location = new System.Drawing.Point(678, 366);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(149, 31);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "your image:";
             // 
             // RegistrationForm
             // 

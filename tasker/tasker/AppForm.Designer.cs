@@ -58,16 +58,35 @@
             this.task_description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deadline = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priority_task = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.helloBox = new System.Windows.Forms.GroupBox();
+            this.helloUserLogin = new System.Windows.Forms.Label();
+            this.helloName = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.userPhotoBox = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.bttnExit = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.priorityTrack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
+            this.helloBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userPhotoBox)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Location = new System.Drawing.Point(10, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 28);
             this.label1.TabIndex = 0;
@@ -77,7 +96,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Gentium Book Basic", 28.14545F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(405, 10);
+            this.label2.Location = new System.Drawing.Point(655, 24);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(355, 50);
             this.label2.TabIndex = 1;
@@ -116,7 +135,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(219)))), ((int)(((byte)(210)))));
+            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(130)))), ((int)(((byte)(163)))));
             this.groupBox2.Controls.Add(this.priorityTrack);
             this.groupBox2.Controls.Add(this.priority);
             this.groupBox2.Controls.Add(this.bttnDelete);
@@ -128,7 +147,7 @@
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.textTaskName);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Location = new System.Drawing.Point(230, 117);
+            this.groupBox2.Location = new System.Drawing.Point(441, 125);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(828, 370);
             this.groupBox2.TabIndex = 9;
@@ -138,7 +157,7 @@
             // 
             // priorityTrack
             // 
-            this.priorityTrack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(119)))), ((int)(((byte)(81)))));
+            this.priorityTrack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(62)))), ((int)(((byte)(87)))));
             this.priorityTrack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.priorityTrack.Location = new System.Drawing.Point(136, 213);
             this.priorityTrack.Name = "priorityTrack";
@@ -159,7 +178,7 @@
             // 
             this.bttnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.bttnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bttnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.bttnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(130)))), ((int)(((byte)(163)))));
             this.bttnDelete.Location = new System.Drawing.Point(323, 297);
             this.bttnDelete.Name = "bttnDelete";
             this.bttnDelete.Size = new System.Drawing.Size(108, 49);
@@ -309,7 +328,7 @@
             this.dataGridView.DefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.dataGridView.Location = new System.Drawing.Point(0, 585);
+            this.dataGridView.Location = new System.Drawing.Point(10, 585);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.ReadOnly = true;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -329,7 +348,7 @@
             dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(241)))), ((int)(((byte)(240)))));
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(5)))), ((int)(((byte)(69)))));
             this.dataGridView.RowsDefaultCellStyle = dataGridViewCellStyle7;
-            this.dataGridView.Size = new System.Drawing.Size(1462, 285);
+            this.dataGridView.Size = new System.Drawing.Size(1617, 285);
             this.dataGridView.TabIndex = 11;
             this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -372,12 +391,176 @@
             this.priority_task.Name = "priority_task";
             this.priority_task.ReadOnly = true;
             // 
-            // Form1
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(219)))), ((int)(((byte)(210)))));
+            this.flowLayoutPanel1.Controls.Add(this.helloBox);
+            this.flowLayoutPanel1.Controls.Add(this.panel3);
+            this.flowLayoutPanel1.Controls.Add(this.label6);
+            this.flowLayoutPanel1.Controls.Add(this.panel2);
+            this.flowLayoutPanel1.Controls.Add(this.panel1);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(10, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(214, 585);
+            this.flowLayoutPanel1.TabIndex = 12;
+            // 
+            // helloBox
+            // 
+            this.helloBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(62)))), ((int)(((byte)(87)))));
+            this.helloBox.Controls.Add(this.helloUserLogin);
+            this.helloBox.Controls.Add(this.helloName);
+            this.helloBox.Controls.Add(this.label7);
+            this.helloBox.Controls.Add(this.userPhotoBox);
+            this.helloBox.Location = new System.Drawing.Point(3, 3);
+            this.helloBox.Name = "helloBox";
+            this.helloBox.Size = new System.Drawing.Size(187, 278);
+            this.helloBox.TabIndex = 19;
+            this.helloBox.TabStop = false;
+            this.helloBox.Enter += new System.EventHandler(this.helloBox_Enter);
+            // 
+            // helloUserLogin
+            // 
+            this.helloUserLogin.AutoSize = true;
+            this.helloUserLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(130)))), ((int)(((byte)(163)))));
+            this.helloUserLogin.Location = new System.Drawing.Point(92, 178);
+            this.helloUserLogin.Name = "helloUserLogin";
+            this.helloUserLogin.Size = new System.Drawing.Size(71, 28);
+            this.helloUserLogin.TabIndex = 3;
+            this.helloUserLogin.Text = "label8";
+            // 
+            // helloName
+            // 
+            this.helloName.AutoSize = true;
+            this.helloName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(130)))), ((int)(((byte)(163)))));
+            this.helloName.Location = new System.Drawing.Point(92, 178);
+            this.helloName.Name = "helloName";
+            this.helloName.Size = new System.Drawing.Size(0, 28);
+            this.helloName.TabIndex = 2;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(62)))), ((int)(((byte)(87)))));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(18, 178);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(71, 28);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Hello,";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
+            // userPhotoBox
+            // 
+            this.userPhotoBox.Location = new System.Drawing.Point(33, 34);
+            this.userPhotoBox.Name = "userPhotoBox";
+            this.userPhotoBox.Size = new System.Drawing.Size(117, 117);
+            this.userPhotoBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.userPhotoBox.TabIndex = 0;
+            this.userPhotoBox.TabStop = false;
+            this.userPhotoBox.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.button1);
+            this.panel3.Location = new System.Drawing.Point(3, 287);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(231, 66);
+            this.panel3.TabIndex = 14;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(130)))), ((int)(((byte)(163)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 13.74545F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(4)))), ((int)(((byte)(68)))));
+            this.button1.Image = global::tasker.Properties.Resources.home;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(-3, 8);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(254, 60);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "       home";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_2);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(3, 356);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(0, 28);
+            this.label6.TabIndex = 15;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.button5);
+            this.panel2.Location = new System.Drawing.Point(3, 387);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(251, 69);
+            this.panel2.TabIndex = 17;
+            // 
+            // button5
+            // 
+            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(130)))), ((int)(((byte)(163)))));
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft YaHei", 13.74545F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(4)))), ((int)(((byte)(68)))));
+            this.button5.Image = global::tasker.Properties.Resources.info;
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(0, 0);
+            this.button5.Name = "button5";
+            this.button5.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button5.Size = new System.Drawing.Size(251, 56);
+            this.button5.TabIndex = 14;
+            this.button5.Text = "       info";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.bttnExit);
+            this.panel1.Location = new System.Drawing.Point(3, 462);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(251, 69);
+            this.panel1.TabIndex = 18;
+            // 
+            // bttnExit
+            // 
+            this.bttnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bttnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(130)))), ((int)(((byte)(163)))));
+            this.bttnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bttnExit.Font = new System.Drawing.Font("Microsoft YaHei", 13.74545F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bttnExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(4)))), ((int)(((byte)(68)))));
+            this.bttnExit.Image = global::tasker.Properties.Resources.exit;
+            this.bttnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bttnExit.Location = new System.Drawing.Point(-3, 13);
+            this.bttnExit.Name = "bttnExit";
+            this.bttnExit.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.bttnExit.Size = new System.Drawing.Size(234, 56);
+            this.bttnExit.TabIndex = 16;
+            this.bttnExit.Text = "       exit";
+            this.bttnExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bttnExit.UseVisualStyleBackColor = false;
+            this.bttnExit.Click += new System.EventHandler(this.bttnExit_Click);
+            // 
+            // AppForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(4)))), ((int)(((byte)(68)))));
-            this.ClientSize = new System.Drawing.Size(1462, 870);
+            this.ClientSize = new System.Drawing.Size(1627, 870);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.tabControl1);
@@ -386,7 +569,8 @@
             this.Font = new System.Drawing.Font("Gentium Book Basic", 15.70909F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.Margin = new System.Windows.Forms.Padding(6);
-            this.Name = "Form1";
+            this.Name = "AppForm";
+            this.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = resources.GetString("$this.Text");
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -395,6 +579,14 @@
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.priorityTrack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
+            this.helloBox.ResumeLayout(false);
+            this.helloBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userPhotoBox)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -424,6 +616,19 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn task_description;
         private System.Windows.Forms.DataGridViewTextBoxColumn deadline;
         private System.Windows.Forms.DataGridViewTextBoxColumn priority_task;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button bttnExit;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.GroupBox helloBox;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.PictureBox userPhotoBox;
+        private System.Windows.Forms.Label helloName;
+        private System.Windows.Forms.Label helloUserLogin;
     }
 }
 
